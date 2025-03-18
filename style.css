@@ -8,11 +8,20 @@ img{
     vertical-align: top;
 }
 
+.color-white{
+    color: white;
+}
+
+.text-center{
+    text-align: center;
+}
+
 /* ******************HEADER******************* */
 header{
     font-family: 'Oswald';
 }
 
+/* **** NAVBAR **** */
 .navbar{
     display: flex;
     width: 100%;
@@ -25,28 +34,21 @@ header{
 }
 .navbar *{
     margin: 1em 0.5em;
-    color: white;
 }
 
-.navbar>p{
-    font-size: 1.5em;
-}
-
-.navbar>ul{
+.navbar ul{
     display: flex;
 }
 
-.navbar>ul>li{
+.navbar ul li{
     margin: 0 1em;
     list-style-type: none;
-    
-    color: white;
 }
 
-.navbar>ul>li>a{
+header a{
     text-decoration: none;
 }
-
+/* ****FIGURE**** */
 header .background-image{
     width: 100%;
 }
@@ -56,9 +58,56 @@ header figure{
     position: relative;
 }
 
-header>figure>.logo{
+header figure .logo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-} 
+}
+
+
+blockquote{
+    background-color: #c59d5f;
+    font-size: 3em;
+    font-family: 'Oswald';
+    text-align: justify;
+}
+
+blockquote p{
+    padding:2em 1em;
+    text-align: center;
+}
+
+/* ******************MAIN******************* */
+
+.container{
+    font-family:  'Raleway';
+    display: flex;
+}
+
+.container article{
+    /* height: 600px; */
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 50%;
+}
+
+.container .figures{
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.container .figures figure{
+    position: absolute;
+    max-width: 100%;
+}
+
+.container .figures figure img{
+    max-width: 100%;
+}
+
