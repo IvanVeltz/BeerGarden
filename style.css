@@ -80,34 +80,32 @@ blockquote p{
 
 /* ******************MAIN******************* */
 
-.container{
-    font-family:  'Raleway';
-    display: flex;
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
 }
 
-.container article{
-    /* height: 600px; */
-    padding: 10%;
+.grid .figure1{
+    background-image: url('media/img/h5-el-holder-img-1-1.jpg');
+}
+
+.grid .figure2{
+    background-image: url('media/img/h5-el-holder-img-2.jpg');
+}
+
+
+.element{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    height: 50%;
+    justify-content: center;
+    text-align: center;
 }
 
-.container .figures{
-    width: 50%;
-    height: 50%;
-    position: relative;
+.grid figure{
+    margin: 0;
+    background-size: cover;
+    background-position: center;
 }
-
-.container .figures figure{
-    position: absolute;
-    max-width: 100%;
-}
-
-.container .figures figure img{
-    max-width: 100%;
-}
-
