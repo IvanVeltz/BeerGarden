@@ -170,7 +170,7 @@ blockquote p{
     opacity: 0;
 }
 
-.overlay a{
+.overlay i{
     position: absolute;
     font-size: 3em;
     top:50%;
