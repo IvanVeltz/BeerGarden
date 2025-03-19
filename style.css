@@ -87,6 +87,31 @@ blockquote p{
     width: 100%;
 }
 
+.grid .element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10%;
+    font-family: 'Raleway';
+}
+
+.grid h2{
+    font-size: 2em;
+}
+
+.grid .element>div>p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.grid figure{
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+}
+
 .grid .figure1{
     background-image: url('media/img/h5-el-holder-img-1-1.jpg');
 }
@@ -95,17 +120,11 @@ blockquote p{
     background-image: url('media/img/h5-el-holder-img-2.jpg');
 }
 
-
-.element{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.grid .element .button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c59d5f;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.grid figure{
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-}
