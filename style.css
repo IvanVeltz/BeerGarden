@@ -213,14 +213,12 @@ blockquote p{
 
 .parallax-img{
     position: absolute;
-    top: 0;
-    left:0;
     height: 150%;
     width: 100%;
     background-image: url('media/img/h5-parallax-img-2.jpg');
     background-size: cover;
-    background-position: center; /* Centre l'image */
-    transform: translateY(-20%); /* Place initiale de l'image */
+    background-position: center; 
+    transform: translateY(-20%); 
 }
 
 .content {
