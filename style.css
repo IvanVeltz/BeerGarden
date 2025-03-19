@@ -286,3 +286,32 @@ footer{
 footer figure{
     margin: 2em;
 }
+
+
+/* *************MEDIA************* */
+* {
+    font-size: small;
+}
+@media only screen and (max-width : 767px){
+    .navbar{
+        justify-content:flex-start;
+    }
+    
+    .navbar *{
+        margin: 0;
+    }
+
+    .navbar figure{
+        width :10%;
+        text-align: left;
+    }
+
+    .navbar img{
+        transform: scale(0.2) translate(-500%);
+        
+    }
+
+    .grid{
+        display: block;
+    }
+}
