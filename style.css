@@ -169,3 +169,39 @@ blockquote p{
 .container-img figure:hover .overlay {
     opacity: 0.8; /* Rend l'overlay visible avec transparence au survol */
 }
+
+/* **SERVICE SECTION** */
+.container-service{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+.container-service div{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center
+}
+
+.container-service div figure{
+    margin: 1em;
+}
+
+.container-service div figure:hover + .subtitle{
+    color: #c59d5f;
+}
+
+.container-service figure{
+    width: 100px;
+    padding: 0;
+    background-color: #c59d5f;
+    border-radius: 50%;
+}
+
+.container-service div img:hover{
+    
+    mix-blend-mode: multiply;
+
+}
