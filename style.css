@@ -114,7 +114,10 @@ blockquote p{
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    padding: 4em;
+}
+
+.grid article{
+    margin : 2em 4em;
 }
 
 .grid .element>div>p{
@@ -141,6 +144,7 @@ blockquote p{
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    color: black;
 }
 
 /* ***GALERIE SECTION*** */
@@ -224,12 +228,14 @@ blockquote p{
 
 .parallax-img{
     position: absolute;
-    height: 150%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     width: 100%;
     background-image: url('media/img/h5-parallax-img-2.jpg');
-    background-size: cover;
-    background-position: center; 
-    transform: translateY(-20%); 
 }
 
 .content {
