@@ -77,6 +77,7 @@ header figure{
 }
 
 header figure .logo{
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,7 +96,7 @@ blockquote{
 }
 
 blockquote p{
-    padding:2em 1em;
+    padding: 2em 20%;
     font-family: 'Oswald';
     text-align: center;
 }
