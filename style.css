@@ -34,7 +34,7 @@ header{
 }
 
 /* **** NAVBAR **** */
-.navbar{
+.container-nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -44,28 +44,39 @@ header{
     background-color: rgba(0, 0, 0, 0.5);
     
 }
-.navbar *{
+.container-nav *{
     margin: 1em 0.5em;
 }
 
-.navbar ul{
+.container-nav .navbar{
     display: flex;
 }
 
-.navbar ul li{
-    margin: 0 1em;
-    list-style-type: none;
+.container-nav .menu input{
+    display: none;
 }
 
-header a{
+.container-nav .navbar a{
+    margin: 0 1em;
     text-decoration: none;
     display: inline-block;
 }
+
+.container-nav .icon{
+    display: flex;
+}
+
+.container-nav a{
+    text-decoration: none;
+}
+
 
 header a:hover{
     transform: scale(1.2);
     text-decoration: underline;
 }
+
+
 /* ****FIGURE**** */
 header .background-image{
     width: 100%;
@@ -83,6 +94,7 @@ header figure .logo{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 
 
@@ -130,6 +142,10 @@ blockquote p{
     margin: 0;
     background-size: cover;
     background-position: center;
+}
+
+.grid figure img{
+    width:100%
 }
 
 .grid .figure1{
@@ -289,29 +305,83 @@ footer figure{
 
 
 /* *************MEDIA************* */
-* {
-    font-size: small;
-}
+
 @media only screen and (max-width : 767px){
-    .navbar{
-        justify-content:flex-start;
-    }
+
     
-    .navbar *{
-        margin: 0;
+    .container-nav figure{
+        width: 30%;
+    }
+    .container-nav img{
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        left: 0; 
     }
 
-    .navbar figure{
-        width :10%;
-        text-align: left;
+    .container-nav .menu{
+        position: relative;
+        height: 10px;
     }
 
-    .navbar img{
-        transform: scale(0.2) translate(-500%);
-        
+    .container-nav .menu label{
+        position: absolute;
+        right: 0;
+        transform: translate(0px, -30px);
     }
+
+    .container-nav .menu .navbar{
+        display: flex;
+        flex-direction: column;
+        background: black;
+        overflow: hidden;
+        width: 200px;
+        transform: translateX(+200px);;
+    }
+
+    #hamburger-logo, nav {
+        /* Pour qu'il y ait une animation */
+        transition: 0.7s;
+    }
+
+    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+    #hamburger:checked ~ #hamburger-logo,
+    #hamburger:checked ~ nav {
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+    }
+
+
+    .container-nav .icon{
+        display: none;
+    }
+
+   .grid{
+        display: block;
+   }
+
+   .container-img{
+    flex-direction: column;
+   }
+
+   .container-service{
+    flex-direction: column;
+   }
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+   
 
     .grid{
         display: block;
     }
+
+    .container-service{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100;
+    }
+
 }
