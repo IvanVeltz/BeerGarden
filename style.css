@@ -52,7 +52,7 @@ header{
     display: flex;
 }
 
-.container-nav .menu input{
+.container-nav .menu input, .container-nav .menu label{
     display: none;
 }
 
@@ -308,6 +308,9 @@ footer figure{
 
 @media only screen and (max-width : 767px){
 
+    .container-nav{
+        height: 50px;
+    }
     
     .container-nav figure{
         width: 30%;
@@ -322,21 +325,28 @@ footer figure{
     .container-nav .menu{
         position: relative;
         height: 10px;
+        margin: 0;
     }
 
     .container-nav .menu label{
+        display: initial;
         position: absolute;
         right: 0;
-        transform: translate(0px, -30px);
+        transform: translate(0px, -35px);
     }
 
     .container-nav .menu .navbar{
         display: flex;
+        position: absolute;
+        right: 0;
         flex-direction: column;
-        background: black;
+        background: rgba(0, 0, 0, 0.5);
         overflow: hidden;
-        width: 200px;
-        transform: translateX(+200px);;
+        align-items: flex-end;
+        margin-top: 32px;
+        margin-right: 0px;
+        width: auto;
+        transform: translateX(+200px);
     }
 
     #hamburger-logo, nav {
@@ -345,7 +355,7 @@ footer figure{
     }
 
     /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
-    #hamburger:checked ~ #hamburger-logo,
+    
     #hamburger:checked ~ nav {
     /* Changement de la position pour afficher les menus */
     transform: translate(0);
