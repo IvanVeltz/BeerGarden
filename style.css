@@ -1,6 +1,7 @@
 :root{
     --white: #ffffff;
     --golden :#c59d5f;
+    --black-opacity : rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -41,7 +42,7 @@ header{
     position: fixed;
     align-items: center;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black-opacity);
     
 }
 .container-nav *{
@@ -130,7 +131,7 @@ blockquote p{
 }
 
 .grid article{
-    margin : 2em 4em;
+    margin : 4em 4em;
 }
 
 .grid .element>div>p{
@@ -214,7 +215,8 @@ blockquote p{
     display: flex;
     flex-direction: column;
     padding: 1em;
-    align-items: center
+    align-items: center;
+    width: 25%;
 }
 
 .container-service div figure{
@@ -245,7 +247,6 @@ blockquote p{
 
 .parallax-img{
     position: absolute;
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -331,36 +332,36 @@ footer figure{
     .container-nav .menu label{
         display: initial;
         position: absolute;
-        right: 0;
-        transform: translate(0px, -35px);
+        right: 1em;
+        margin: 0;
+    }
+
+    .container-nav label i{
+        margin: 0;
     }
 
     .container-nav .menu .navbar{
         display: flex;
+        flex-direction: column;
         position: absolute;
         right: 0;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        align-items: flex-end;
+        background: var(--black-opacity);
+        align-items: center;
+        justify-content: space-around;
         margin-top: 32px;
         margin-right: 0px;
         width: auto;
+        height: 200px;
         transform: translateX(+200px);
     }
 
     #hamburger-logo, nav {
-        /* Pour qu'il y ait une animation */
         transition: 0.7s;
     }
 
-    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
-    
     #hamburger:checked ~ nav {
-    /* Changement de la position pour afficher les menus */
     transform: translate(0);
     }
-
 
     .container-nav .icon{
         display: none;
@@ -370,21 +371,40 @@ footer figure{
         display: block;
    }
 
+   .grid article{
+        margin : 1em 2em
+   }
+
+   .grid article.element *{
+        margin : 0.5em;
+    }
+
    .container-img{
-    flex-direction: column;
+        flex-direction: column;
    }
 
    .container-service{
-    flex-direction: column;
+        flex-direction: column;
+   }
+
+   .container-service div{
+        width: 100%;
    }
 }
 
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
    
+    .menu{
+        margin : 1em 0;
+    }
 
     .grid{
         display: block;
+    }
+
+    .grid article.element *{
+        margin : 0.5em;
     }
 
     .container-service{
@@ -393,5 +413,9 @@ footer figure{
         grid-template-rows: repeat(2, 1fr);
         width: 100;
     }
+
+    .container-service div{
+        width: 100%;
+       }
 
 }
